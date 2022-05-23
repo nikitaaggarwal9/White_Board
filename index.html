@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>White Board</title>
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img class="pencil" src="./icons8-pencil-96.png" alt="">
+        <img class="eraser" src="./icons8-erase-96.png" alt="">
+        <img class="download" src="./icons8-downloads-96.png" alt="">
+        <img class="upload" src="./icons8-image-96.png" alt="">
+        <img class="sticky-note" src="./icons8-note-96.png" alt="">
+        <img class="undo" src="./icons8-undo-96.png" alt="">
+        <img class="redo" src="./icons8-redo-96.png" alt="">
+    </div>
+
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input class="pencil-width" type="range" min="2" max="5" value="2">
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div>
+    </div>
+
+    <div class="eraser-tool-cont">
+        <div class="earser-width-cont">
+            <input class="eraser-width" type="range" min="2" max="5" value="2">
+        </div>
+        <div class="erase-all-cont">
+            <i class="fa-solid fa-trash"></i>
+        </div>
+    </div>
+
+    <canvas></canvas>
+    
+    <script src="./script.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>

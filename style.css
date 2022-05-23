@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.options-cont {
+    height: 3rem;
+    width: 3rem;
+    /* background-color: lightgray; */
+    background-color: #dfe6e9;
+    position: absolute;
+    top: 1.3rem;
+    left: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.tools-cont {
+    height: 29rem;
+    width: 5rem;
+    border: 3px solid gray;
+    border-radius: 1rem;
+    background-color: #dfe6e9;
+    position: absolute;
+    top: 9.7rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.tools-cont > * {
+    display: block;
+    width: 3.3rem;
+    height: 3.3rem;
+    cursor: pointer;
+    /* background-color: black; */
+}
+
+.tools-cont > *:hover {
+    background-color: white;
+    border-radius: .8rem;
+}
+
+.default {
+    background-color: white;
+    border-radius: .8rem;   
+}
+
+.scale-tools {
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+
+@keyframes scale-tools {
+    0% {
+        transform: scale(0.1);
+    }
+    1000% {
+        transform: scale(1);
+    }
+}
+
+.pencil-tool-cont {
+    height: 3rem;
+    width: 15rem;
+    border-radius: .4rem;
+    /* background-color: gray; */
+    border: 2px solid gray;
+    position: absolute;
+    top: 10rem;
+    left: 6.3rem;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pencil-width-cont {
+    height: 2rem;
+    width: 9rem;
+    /* background-color: red; */
+    border: 1px solid lightgray;
+    border-radius: .2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pencil-color-cont {
+    height: 2rem;
+    width: 5rem;
+    /* background-color: green; */
+    border: 1px solid lightgray;
+    border-radius: .2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pencil-color {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+}
+
+/* .pencil-color:hover {
+    border-radius: .1rem;
+    border: 1px solid gray;
+    background-color: lightgray;
+} */
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.eraser-tool-cont {
+    height: 3rem;
+    width: 11.56rem;
+    border-radius: .4rem;
+    /* background-color: gray; */
+    border: 2px solid gray;
+    position: absolute;
+    top: 13.5rem;
+    left: 6.3rem;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.earser-width-cont {
+    height: 2rem;
+    width: 9rem;
+    /* background-color: red; */
+    border: 1px solid lightgray;
+    border-radius: .2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.erase-all-cont {
+    height: 2rem;
+    width: 1.5rem;
+    /* background-color: green; */
+    border: 1px solid lightgray;
+    border-radius: .2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.erase-all-cont:hover {
+    background-color: #b2bec3;
+}
+
+.sticky-cont {
+    height: 15rem;
+    width: 15rem;
+    /* background-color: aqua; */
+    top: 30vh;
+    left: 43vw;
+    position: absolute;
+    /* display: none; */
+}
+
+.header-cont {
+    height: 2rem;
+    width: 15rem;
+    background-color: #CAD3C8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-cont>* {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.minimize {
+    /* height: 1rem;
+    width: 1rem; */
+    background-color: green;
+}
+
+.remove {
+    /* height: 1rem;
+    width: 1rem; */
+    background-color: red;
+}
+
+.note-cont {
+    height: 13rem;
+    width: 15rem;
+    /* background-color: red; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    font-size: large;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+}
