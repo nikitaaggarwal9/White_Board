@@ -48,7 +48,7 @@ canvas.addEventListener("mousedown", (e) => {
         x: e.clientX,
         y: e.clientY
     }
-    console.log(tool.strokeStyle, tool.lineWidth)
+    // console.log(tool.strokeStyle, tool.lineWidth)
     // send data to server
     socket.emit("beginPath", data);
 })
@@ -61,14 +61,14 @@ canvas.addEventListener("mousemove", (e) => {
         //     x: e.clientX,
         //     y: e.clientY
         // });
-        console.log(eraserIconFlag, eraserColor, pencilColor)
+        // console.log(eraserIconFlag, eraserColor, pencilColor)
         let data = {
             x: e.clientX,
             y: e.clientY,
             color: eraserIconFlag ? eraserColor : pencilColor,
             width: eraserIconFlag ? eraserWidth : pencilWidth
         }
-        console.log(data.color);
+        // console.log(data.color);
         // send data to server
         socket.emit("drawStroke", data);
     }
@@ -86,14 +86,14 @@ canvas.addEventListener("mouseup", (e) => {
 })
 
 function beginPath(strokeObj) {
-    console.log(eraserIconFlag);
-    console.log(tool.strokeStyle);
+    // console.log(eraserIconFlag);
+    // console.log(tool.strokeStyle);
     tool.beginPath();
     tool.moveTo(strokeObj.x, strokeObj.y);
 }
 
 function drawStroke(strokeObj) {
-    console.log(strokeObj.color);
+    console.log(strokeObj.color, strokeObj.width);
     tool.strokeStyle = strokeObj.color;
     tool.lineWidth = strokeObj.width;
     tool.lineTo(strokeObj.x, strokeObj.y);
@@ -123,20 +123,23 @@ pencilWidthElem.addEventListener("change", (e) => {
 pencilIcon.addEventListener("click", (e) => {
     eraserIconFlag = false;
     setDefaultUI(pencilIcon);
-    console.log(pencilColor, pencilWidth)
+    // console.log(pencilColor, pencilWidth)
     // pencilIconFlag = !pencilIconFlag;
     tool.strokeStyle = pencilColor;
     tool.lineWidth = pencilWidth;
 })
 
 eraserWidthElem.addEventListener("change", (e) => {
-    tool.lineWidth = eraserWidthElem.value;
+    // console.log(eraserWidthElem.value)
+    eraserWidth = eraserWidthElem.value;
+    tool.lineWidth = eraserWidth;
+    console.log(tool.lineWidth)
 })
 
 eraserIcon.addEventListener("click", (e) => {
     setDefaultUI(eraserIcon);
     eraserIconFlag = !eraserIconFlag;
-    console.log(eraserIconFlag);
+    // console.log(eraserIconFlag);
     if (eraserIconFlag) {
         tool.strokeStyle = eraserColor;
         tool.lineWidth = eraserWidth;
@@ -208,7 +211,7 @@ redoIcon.addEventListener("click", (e) => {
 function undoRedoCanvas(trackObj) {
     track = trackObj.trackValue;
     undoRedoTracker = trackObj.undoRedoTracker;
-    console.log(track);
+    // console.log(track);
 
     let url = undoRedoTracker[track];
     // console.log(url, track);
