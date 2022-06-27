@@ -78,11 +78,12 @@ body {
     /* background-color: gray; */
     border: 2px solid gray;
     position: absolute;
-    top: 10rem;
+    top: 10.6rem;
     left: 6.3rem;
     display: none;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
 }
 
 .pencil-width-cont {
@@ -113,11 +114,9 @@ body {
     border-radius: 1rem;
 }
 
-/* .pencil-color:hover {
-    border-radius: .1rem;
-    border: 1px solid gray;
-    background-color: lightgray;
-} */
+.pencil-color:hover {
+    transform: scale(1.1);
+}
 
 .black {
     background-color: black;
@@ -138,11 +137,12 @@ body {
     /* background-color: gray; */
     border: 2px solid gray;
     position: absolute;
-    top: 13.5rem;
+    top: 14.6rem;
     left: 6.3rem;
     display: none;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
 }
 
 .earser-width-cont {
@@ -168,8 +168,8 @@ body {
     align-items: center;
 }
 
-.erase-all-cont:hover {
-    background-color: #b2bec3;
+.erase-all-cont>*:hover {
+    transform: scale(1.1);
 }
 
 .sticky-cont {

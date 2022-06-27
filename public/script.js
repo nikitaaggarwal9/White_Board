@@ -9,7 +9,7 @@ let eraserToolCont = document.querySelector(".eraser-tool-cont");
 let optionFlag = false;
 let pencilFlag = false;
 let eraserFlag = false;
-
+// console.log(pencilFlag);
 optionCont.addEventListener("click", (e) => {
     optionFlag = !optionFlag;
 
@@ -29,7 +29,7 @@ function closeTools() {
     iconElem.classList.add("fa-bars");
     iconElem.classList.remove("fa-times");
     toolsCont.style.display = "none";
-    setDefaultUI();
+    // setDefaultUI();
 }
 
 pencilIcon.addEventListener("dblclick", (e) => {
@@ -41,7 +41,6 @@ pencilIcon.addEventListener("dblclick", (e) => {
 
 eraserIcon.addEventListener("dblclick", (e) => {
     eraserFlag = !eraserFlag;
-
     if (eraserFlag) eraserToolCont.style.display = "flex";
     else eraserToolCont.style.display = "none";
 })
@@ -175,5 +174,5 @@ function setDefaultUI(element) {
     allIcons.forEach(icon => {
         icon.classList.remove("default");
     })
-    element.classList.add("default");
+   element.classList.add("default");
 }
