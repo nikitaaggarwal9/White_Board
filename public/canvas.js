@@ -48,7 +48,7 @@ canvas.addEventListener("mousedown", (e) => {
         x: e.clientX,
         y: e.clientY
     }
-    // console.log(tool.strokeStyle, tool.lineWidth)
+    console.log(tool.strokeStyle, tool.lineWidth)
     // send data to server
     socket.emit("beginPath", data);
 })
@@ -237,6 +237,6 @@ socket.on("undoRedoCanvas", (data) => {
     undoRedoCanvas(data);
 })
 
-// socket.on("colorChange", (data)=> {
-//     changeColor(data.width, data.color);
-// })
+socket.on("colorChange", (data)=> {
+    changeColor(data.width, data.color);
+})
